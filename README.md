@@ -1,4 +1,4 @@
-# Get IP - A simple application for demoing Kybernetes
+# Get IP - A simple application for demoing Kubernetes
 
 A simple Python application that uses the Bottle framework to serve a JSON encoded client IP address of a user who makes a GET request to /.
 

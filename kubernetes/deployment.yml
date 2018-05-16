@@ -1,13 +1,9 @@
-# This template file will have its environment variables expanded
-# and the .template extension removed by the bash-template Wercker step.
-# See wercker.yml.
-
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: get-ip
   labels:
-    commit: ${WERCKER_GIT_COMMIT}
+    version: v0.1
 spec:
   replicas: 1
   selector:
@@ -17,15 +13,14 @@ spec:
     metadata:
       labels:
         app: get-ip
-        commit: ${WERCKER_GIT_COMMIT}
+        version: v0.1
     spec:
       containers:
       - name: get-ip-server
-        image: ${DOCKER_REPO}:${WERCKER_GIT_COMMIT}
+        image: iad.ocir.io/intkaslinfields/get-ip:v0.1
         ports:
         - name: get-ip-server
           containerPort: 8080
           protocol: TCP
       imagePullSecrets:
-      - name:  ${OKE_IMAGESECRET}
-
+      - name: ocir-riceo

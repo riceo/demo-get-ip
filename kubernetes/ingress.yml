@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: get-ip
+spec:
+  rules:
+  - host: get-ip.prod-k8s.riceo.me
+    http:
+      paths:
+      - path: /get-ip
+        backend:
+          serviceName: get-ip
+          servicePort: 8080

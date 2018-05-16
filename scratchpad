@@ -1,0 +1,7 @@
+DOCKER_USERNAME="odx-pipelines/aaron.r.rice@oracle.com"
+DOCKER_PASSWORD="QmzTT_;F8H9U]n4h4<E["
+DOCKER_REPO="odx-pipelines/riceo"
+OKE_MASTER=""
+OKE_TOKEN=""
+OKE_IMAGESECRET=""
+
